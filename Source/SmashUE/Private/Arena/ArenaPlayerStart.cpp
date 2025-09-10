@@ -3,6 +3,7 @@
 
 #include "Arena/ArenaPlayerStart.h"
 
+#include "Arena/SmashCharacter.h"
 
 
 float AArenaPlayerStart::GetStartOrientX() const
@@ -15,3 +16,7 @@ float AArenaPlayerStart::GetStartOrientX() const
 
 	return 0.f;
 }
+
+
+
+
