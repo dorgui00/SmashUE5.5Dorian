@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESmashCharacterStateID : uint8
 {
 	Nome = 0,
