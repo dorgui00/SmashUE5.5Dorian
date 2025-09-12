@@ -2,6 +2,7 @@
 
 
 #include "Arena/SmashCharacter.h"
+#include "Character/SmashCharacterMachine.h"
 
 // Sets default values
 ASmashCharacter::ASmashCharacter()
@@ -15,6 +16,8 @@ ASmashCharacter::ASmashCharacter()
 void ASmashCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	CreateStateMachine();
+	InitStateMachine();
 	
 }
 
@@ -47,5 +50,16 @@ void ASmashCharacter::RotateMeshUsingOrientX() const
 	FRotator Rotator = GetMesh()->GetRelativeRotation();
 	Rotator.Yaw = -90.f * OrientX;
 	GetMesh()->SetRelativeRotation(Rotator);
+}
+
+void ASmashCharacter::CreateStateMachine()
+{
+	StateMachine = NewObject<USmashCharacterMachine>(this);
+}
+
+void ASmashCharacter::InitStateMachine()
+{
+	if (StateMachine == nullptr)return;
+	StateMachine->Init(this);
 }
 
