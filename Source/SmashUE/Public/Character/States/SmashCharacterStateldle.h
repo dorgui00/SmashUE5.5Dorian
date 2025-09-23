@@ -14,7 +14,7 @@ class SMASHUE_API USmashCharacterStateldle : public USmashCharacterState
 
 public:
 	// Sets default values for this component's properties
-	USmashCharacterStateldle();
+	//USmashCharacterStateldle();
 	virtual ESmashCharacterStateID GetStateID() override;
 	virtual void StateEnter(ESmashCharacterStateID PreviousStateID) override;
 	virtual void StateExit(ESmashCharacterStateID NextStateID)override;
