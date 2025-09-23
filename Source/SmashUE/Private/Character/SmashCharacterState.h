@@ -23,6 +23,7 @@ public:
 	virtual void StateInit(USmashCharacterMachine* InStateMachine);
 	virtual void StateEnter(ESmashCharacterStateID PreviousStateID);
 	virtual void StateExit(ESmashCharacterStateID NextStateID);
+	virtual void StateTick(float DeltaTime);
 
 protected:
 	UPROPERTY()
